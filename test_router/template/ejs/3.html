@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>我是用户页面</h3>
+    <a href="/index">
+    <p><%=data.loginname%></p>
+
+    <%  data.recent_topics.forEach( item => {%>
+        <img src="<%=item.author.avatar_url %>" alt="">
+        <p><%=item.author.loginname    %></p>
+        <p><%=item.title    %></p>
+        <p><%=item.last_reply_at    %></p>
+
+        <% })  %>
+    </a>
+</body>
+</html>
